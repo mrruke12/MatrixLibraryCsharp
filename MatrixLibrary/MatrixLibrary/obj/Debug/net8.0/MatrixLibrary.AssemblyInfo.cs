@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MatrixLibrary")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+700cd9a031304215d43453bf2d4857e3c198b320")]
 [assembly: System.Reflection.AssemblyProductAttribute("MatrixLibrary")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MatrixLibrary")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

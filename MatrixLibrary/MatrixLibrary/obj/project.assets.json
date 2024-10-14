@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\mrruk\\Desktop\\c#\\MatrixLibrary\\MatrixLibrary\\MatrixLibrary.csproj",
+      "projectUniqueName": "C:\\Users\\mrruk\\Desktop\\c#\\MatrixLibraryCsharp\\MatrixLibrary\\MatrixLibrary\\MatrixLibrary.csproj",
       "projectName": "MatrixLibrary",
-      "projectPath": "C:\\Users\\mrruk\\Desktop\\c#\\MatrixLibrary\\MatrixLibrary\\MatrixLibrary.csproj",
+      "projectPath": "C:\\Users\\mrruk\\Desktop\\c#\\MatrixLibraryCsharp\\MatrixLibrary\\MatrixLibrary\\MatrixLibrary.csproj",
       "packagesPath": "C:\\Users\\mrruk\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\mrruk\\Desktop\\c#\\MatrixLibrary\\MatrixLibrary\\obj\\",
+      "outputPath": "C:\\Users\\mrruk\\Desktop\\c#\\MatrixLibraryCsharp\\MatrixLibrary\\MatrixLibrary\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
