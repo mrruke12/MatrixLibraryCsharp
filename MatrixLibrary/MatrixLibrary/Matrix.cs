@@ -27,13 +27,36 @@
             return m;
         }
 
-        public void Print() {
+        public string ToString() {
+            string s = "";
+
             for (int i = 0; i < size; i++) {
                 for (int j = 0; j < size; j++) {
-                    Console.Write($"{m[i][j]} ");
+                   s += $"{m[i][j]} ";
                 }
-                Console.WriteLine();
+                s += "\n";
             }
+
+            return s;
+        }
+
+        public int Minor(int i, int j) {
+            Matrix minor = new Matrix(size - 1); // создаем контейнер для минора текущего элемента
+
+            int cRow = 0; // текущая строка в миноре
+            int cCol = 0; // текущий столбец в 
+
+            for (int a = 0; a < size; a++) {
+                cCol = 0; // обнуляем текущий столбец
+                if (a == i) continue; // пропускаем ряд нашего элемента
+                for (int b = 1; b < size; b++) {
+                    minor[cRow, cCol] = this[a, b];
+                    cCol++;
+                }
+                cRow++;
+            }
+
+            return Determinator(minor);
         }
 
         public int Determinator(Matrix curr = null) {
@@ -44,23 +67,8 @@
             int res = 0;
 
             for (int i = 0; i < curr.size; i++) { // перебираем элементы первого столбца
-                Matrix minor = new Matrix(curr.size - 1); // создаем контейнер для минора текущего элемента
                 int multiplier = i % 2 == 0 ? 1 : -1;
-
-                int cRow = 0; // текущая строка в миноре
-                int cCol = 0; // текущий столбец в 
-
-                for (int a = 0; a < curr.size; a++) {
-                    cCol = 0; // обнуляем текущий столбец
-                    if (a == i) continue; // пропускаем ряд нашего элемента
-                    for (int b = 1; b < curr.size; b++) {
-                        minor[cRow, cCol] = curr[a, b];
-                        cCol++;
-                    }
-                    cRow++;
-                }
-
-                res += curr[i, 0] * multiplier * Determinator(minor); // вычисляем текущее алгебраическое дополнение, минор и умножаем на элемент
+                res += curr[i, 0] * multiplier * curr.Minor(i, 0); // вычисляем текущее алгебраическое дополнение, минор и умножаем на элемент
             }
 
             return res;
